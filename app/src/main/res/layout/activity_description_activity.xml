@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".description_activity">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/description_img"
+                android:src="@drawable/bean_bag_1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                ></ImageView>
+
+            <ImageButton
+                android:id="@+id/back_arrow_0"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:clickable="true"
+                ></ImageButton>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_outline_shopping_bag_24"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                ></ImageButton>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/product_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Bean Bag"
+                ></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/no_of_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="25sp"
+                android:layout_marginRight="80dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/price_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:padding="10dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></TextView>
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/gradient_end"
+                android:background="@drawable/ic_baseline_indeterminate_check_box_24"
+                android:padding="10dp"
+                ></Button>
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/gradient_end"
+                android:background="@drawable/ic_baseline_add_box_24"
+                android:padding="10dp"
+                ></Button>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Description"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/description_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"></TextView>
+
+        <Button
+            android:id="@+id/view_AR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="24dp"
+            android:fontFamily="serif"
+            android:text="VIEW AR"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_corners"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            ></Button>
+
+
+        <Button
+            android:id="@+id/add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="serif"
+            android:text="ADD TO CART"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_corners"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            />
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+

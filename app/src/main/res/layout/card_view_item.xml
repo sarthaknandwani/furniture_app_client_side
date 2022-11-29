@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:padding="10dp"
+    android:id="@+id/cardView_id"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="4dp"
+    >
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_0"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/bean_bag_1"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/new_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/new_bg_color_gradient_blue"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Bean Bag"
+            ></TextView>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style = "?android:attr/ratingBarStyleSmall"
+            android:layout_marginRight="10dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:progressTint="@color/yellow_stars"
+            android:progressBackgroundTint="@color/yellow_stars"
+            android:secondaryProgressTint="@color/yellow_stars"
+            ></RatingBar>
+
+        <TextView
+            android:id="@+id/company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            android:text="Hay"
+            android:textColor="@color/black"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/cost_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$199"
+            android:textSize="20sp"
+            android:padding="10dp"
+            ></TextView>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
