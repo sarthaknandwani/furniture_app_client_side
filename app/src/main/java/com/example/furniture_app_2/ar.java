@@ -9,6 +9,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.ar.core.Anchor;
@@ -16,6 +17,7 @@ import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
+import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException;
 
 import java.util.Objects;
 
@@ -30,14 +32,15 @@ public class ar extends AppCompatActivity {
     // only once when we tap the screen
     private int clickNo = 0;
 //
+private static final String TAG = "augmented";
     public static boolean checkSystemSupport(Activity activity) {
-//
-//        // checking whether the API version of the running Android >= 24
-//        // that means Android Nougat 7.0
-       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//
+
+        // checking whether the API version of the running Android >= 24
+        // that means Android Nougat 7.0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+
             String openGlVersion = ((ActivityManager) Objects.requireNonNull(activity.getSystemService(Context.ACTIVITY_SERVICE))).getDeviceConfigurationInfo().getGlEsVersion();
-//
+
             // checking whether the OpenGL version >= 3.0
             if (Double.parseDouble(openGlVersion) >= 3.0) {
                 return true;
@@ -54,6 +57,7 @@ public class ar extends AppCompatActivity {
     }
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,8 +71,10 @@ public class ar extends AppCompatActivity {
         }
 
         // ArFragment is linked up with its respective id used in the activity_main.xml
+        Log.d(TAG, "onCreate: uri = "+uri.toString());
         arCam = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.abcd);
-//
+        Log.d(TAG, "onCreate: arCam.toString = "+arCam.toString());
+        //
         arCam.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
 //
             clickNo++;
@@ -84,15 +90,12 @@ public class ar extends AppCompatActivity {
                         .thenAccept(modelRenderable -> addModel(anchor, modelRenderable))
                         .exceptionally(throwable -> {
                             AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                            Log.d(TAG, "onCreate: " + throwable.getMessage());
                             builder.setMessage("Something is not right" + throwable.getMessage()).show();
                             return null;
                         });
-            } else {
-                return;
             }
         });
-
-
 
 
     }
